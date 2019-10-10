@@ -27,5 +27,7 @@ const routine = [wakeDog, leashDog, walkToPark, throwFrisbee, walkHome, unleashD
 
 function exerciseDog(dogName, dogBreed){
   //return array with the new values
-     routine.forEach(dogName,dogBreed)
+      const duties = []
+      routine.forEach( routineFunction => { duties.push(routineFunction(dogName,dogBreed))}   )
+      return duties
 }
