@@ -33,19 +33,44 @@ function walkHome(dogName, dogBreed) {
 }
 
 
-let routine = [
-  function() {wakeDog(dogName, dogBreed)},
-  function() {leashDog(dogName, dogBreed)}
-  function() {walkToPark(dogName, dogBreed)},
-  function() {throwFrisbee(dogName, dogBreed)},
-  function() {unleashDog(dogName, dogBreed)},
-  function() {walkHome(dogName, dogBreed)}
+// const routine = [
+//   function() {wakeDog(dogName, dogBreed)},
+//   function() {leashDog(dogName, dogBreed)}
+//   function() {walkToPark(dogName, dogBreed)},
+//   function() {throwFrisbee(dogName, dogBreed)},
+//   function() {unleashDog(dogName, dogBreed)},
+//   function() {walkHome(dogName, dogBreed)}
+//
+// ];
 
+// const routine = [
+//   wakeDog(dogName, dogBreed),
+//   leashDog(dogName, dogBreed),
+//   walkToPark(dogName, dogBreed),
+//   throwFrisbee(dogName, dogBreed),
+//   unleashDog(dogName, dogBreed),
+//   walkHome(dogName, dogBreed)
+// ];
+
+const routine = [
+  wakeDog,
+  leashDog,
+  walkToPark,
+  throwFrisbee,
+  unleashDog,
+  walkHome
 ];
 
 
 function exerciseDog(dogName, dogBreed) {
+  let new_array = []
 for (var i = 0; i < routine.length; i++) {
-  array[i].call()
+  new_array.push(routine[i](dogName, dogBreed))
 }
+  return new_array
 }
+
+// function exerciseDog(dogName, dogBreed) {
+//   for (var i = 0; i < routine.length; i++) {
+//       routine.map(dogName, dogBreed)
+// }
