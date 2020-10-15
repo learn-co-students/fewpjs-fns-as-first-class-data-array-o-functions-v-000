@@ -19,29 +19,31 @@ function unleashDog(dogName, dogBreed) {
 
 let routine = [wakeDog, leashDog, walkToPark, throwFrisbee, walkHome, unleashDog];
 
+function exerciseDog(dogName, dogBreed) {
+    for (let i = 0; i < routine.length; i++) {
+        routine[0] = wakeDog(dogName, dogBreed);
+        routine[1] = leashDog(dogName, dogBreed);
+        routine[2] = walkToPark(dogName, dogBreed);
+        routine[3] = throwFrisbee(dogName, dogBreed);
+        routine[4] = walkHome(dogName, dogBreed);
+        routine[5] = unleashDog(dogName, dogBreed);
+    }   
+    return routine; 
+}
+console.log(exerciseDog);
+// let result = exerciseDog(dogName, dogBreed);
+// console.log(result); 
+
 // function exerciseDog(dogName, dogBreed) {
-//     for (let i = 0; i < routine.length; i++) {
+//     let i = 0;
+//     while (i < routine.length) {
 //         wakeDog(dogName, dogBreed);
 //         leashDog(dogName, dogBreed);
 //         walkToPark(dogName, dogBreed);
 //         throwFrisbee(dogName, dogBreed);
 //         walkHome(dogName, dogBreed);
 //         unleashDog(dogName, dogBreed);
+//         i++
 //     }   
 //     return routine; 
 // }
-
-function exerciseDog(dogName, dogBreed) {
-    let i = 0;
-    while (i < routine.length) {
-        wakeDog(dogName, dogBreed);
-        leashDog(dogName, dogBreed);
-        walkToPark(dogName, dogBreed);
-        throwFrisbee(dogName, dogBreed);
-        walkHome(dogName, dogBreed);
-        unleashDog(dogName, dogBreed);
-        i++
-    }   
-    return routine; 
-}
-exerciseDog(dogName, dogBreed);
