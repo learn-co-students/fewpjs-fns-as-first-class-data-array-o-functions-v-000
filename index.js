@@ -27,11 +27,11 @@ let routine = [wakeDog,leashDog,walkToPark,throwFrisbee,walkHome,unleashDog]
 
 
 function exerciseDog(dogName="Byron", dogBreed="poodle"){
-  // return routine.map(purple => purple(dogName, dogBreed))
-  let instructions = []
-  for (const step of routine) {
-    let instruction = step(dogName, dogBreed)
-    instructions.push(instruction)
-  }
-  return instructions
+  return routine.map(purple => purple(dogName, dogBreed))
+  // let instructions = []
+  // for (const step of routine) {
+  //   let instruction = step(dogName, dogBreed)
+  //   instructions.push(instruction)
+  // }
+  // return instructions
 }
